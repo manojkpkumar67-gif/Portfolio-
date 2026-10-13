@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,31 +8,26 @@
   <title>Manoj Kumar K | AI & ML Student Portfolio</title>
 
   <meta name="description"
-        content="Portfolio of Manoj Kumar K, a B.E. Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning.">
+    content="Portfolio of Manoj Kumar K, a B.E. Computer Science and Engineering student specializing in AI and ML.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
 
   <style>
-
     :root {
       --bg: #0b1120;
       --card: #111827;
       --card-light: #172033;
       --border: #263247;
-
       --text: #f1f5f9;
       --muted: #94a3b8;
-
       --primary: #60a5fa;
       --secondary: #38bdf8;
       --accent: #a78bfa;
-
       --success: #4ade80;
-
       --max-width: 1050px;
     }
 
@@ -63,22 +58,17 @@
       margin: auto;
     }
 
-    /* ================= NAVIGATION ================= */
-
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-
-      background: rgba(11, 17, 32, 0.88);
+      background: rgba(11, 17, 32, 0.92);
       backdrop-filter: blur(15px);
-
       border-bottom: 1px solid var(--border);
     }
 
     .nav-container {
       min-height: 70px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -111,16 +101,11 @@
       color: var(--primary);
     }
 
-    /* ================= HERO ================= */
-
     .hero {
       min-height: 620px;
-
       display: flex;
       align-items: center;
-
       padding: 90px 0 70px;
-
       background:
         radial-gradient(
           circle at 80% 20%,
@@ -143,7 +128,7 @@
     .hero h1 {
       font-family: "Space Grotesk", sans-serif;
       font-size: clamp(2.7rem, 7vw, 5rem);
-      line-height: 1.05;
+      line-height: 1.1;
       margin-bottom: 1.3rem;
     }
 
@@ -171,6 +156,7 @@
     }
 
     .btn {
+      display: inline-block;
       padding: 0.75rem 1.3rem;
       border-radius: 8px;
       font-weight: 600;
@@ -198,10 +184,9 @@
       color: var(--primary);
     }
 
-    /* ================= SECTIONS ================= */
-
     section {
       padding: 80px 0;
+      scroll-margin-top: 70px;
     }
 
     .section-heading {
@@ -228,8 +213,6 @@
       max-width: 650px;
     }
 
-    /* ================= ABOUT ================= */
-
     .about-text {
       max-width: 800px;
       color: var(--muted);
@@ -240,8 +223,6 @@
       color: var(--text);
       font-weight: 600;
     }
-
-    /* ================= SKILLS ================= */
 
     .skills-grid {
       display: grid;
@@ -272,11 +253,13 @@
       font-size: 0.85rem;
     }
 
-    /* ================= PROJECTS ================= */
+    /* PROJECTS */
 
     .projects {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.3rem;
+      align-items: stretch;
     }
 
     .project {
@@ -321,8 +304,6 @@
       font-size: 0.88rem;
     }
 
-    /* ================= EDUCATION ================= */
-
     .timeline {
       border-left: 2px solid var(--border);
       padding-left: 1.5rem;
@@ -335,14 +316,11 @@
 
     .timeline-item::before {
       content: "";
-
       position: absolute;
       width: 10px;
       height: 10px;
-
       border-radius: 50%;
       background: var(--primary);
-
       left: -1.9rem;
       top: 7px;
     }
@@ -361,8 +339,6 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
-
-    /* ================= LEARNING ================= */
 
     .learning-grid {
       display: grid;
@@ -398,8 +374,6 @@
       font-weight: 600;
     }
 
-    /* ================= ACHIEVEMENTS ================= */
-
     .achievement-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -422,8 +396,6 @@
       margin-right: 0.5rem;
     }
 
-    /* ================= INTERESTS ================= */
-
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -439,15 +411,12 @@
       font-size: 0.82rem;
     }
 
-    /* ================= CONTACT ================= */
-
     .contact-box {
       background: linear-gradient(
         135deg,
         var(--card),
         var(--card-light)
       );
-
       border: 1px solid var(--border);
       border-radius: 15px;
       padding: 2rem;
@@ -465,6 +434,7 @@
     }
 
     .contact-link {
+      display: inline-block;
       padding: 0.7rem 1rem;
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -478,8 +448,6 @@
       color: var(--primary);
     }
 
-    /* ================= FOOTER ================= */
-
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 0;
@@ -488,10 +456,7 @@
       font-size: 0.8rem;
     }
 
-    /* ================= MOBILE ================= */
-
     @media (max-width: 700px) {
-
       .nav-links {
         display: none;
       }
@@ -507,7 +472,8 @@
 
       .skills-grid,
       .learning-grid,
-      .achievement-list {
+      .achievement-list,
+      .projects {
         grid-template-columns: 1fr;
       }
 
@@ -519,13 +485,12 @@
         font-size: 1.05rem;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- ================= NAVIGATION ================= -->
+  <!-- NAVIGATION -->
 
   <nav>
     <div class="container nav-container">
@@ -546,75 +511,55 @@
     </div>
   </nav>
 
-
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
 
   <header class="hero" id="home">
-
     <div class="container">
-
       <div class="hero-content">
 
-        <div class="hello">
-          HELLO, I'M
-        </div>
+        <div class="hello">HELLO, I'M</div>
 
-        <h1>
-          Manoj Kumar <span>K</span>
-        </h1>
+        <h1>Manoj Kumar <span>K</span></h1>
 
         <div class="hero-role">
           B.E. CSE (AI & ML) Student
         </div>
 
         <p class="hero-description">
-          A Computer Science student interested in Artificial Intelligence,
-          Machine Learning, software development and practical technology
-          projects. I enjoy learning new technologies and turning ideas
-          into working applications.
+          A Computer Science student interested in Artificial
+          Intelligence, Machine Learning, software development
+          and practical technology projects. I enjoy learning
+          new technologies and turning ideas into working applications.
         </p>
 
         <div class="buttons">
-
           <a href="#projects" class="btn btn-primary">
             View My Projects
           </a>
 
-          <a href="mailto:ajaykumar2007ac@gmail.com"
-             class="btn btn-outline">
+          <a href="#contact" class="btn btn-outline">
             Contact Me
           </a>
-
         </div>
 
       </div>
-
     </div>
-
   </header>
 
-
-  <!-- ================= ABOUT ================= -->
+  <!-- ABOUT -->
 
   <section id="about">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          About Me
-        </div>
-
+        <div class="section-label">About Me</div>
         <h2>Building skills through practical projects</h2>
-
       </div>
 
       <p class="about-text">
-
-        I'm <span class="highlight">Manoj Kumar K</span>, a second-year
-        B.E. Computer Science and Engineering student specializing in
-        Artificial Intelligence and Machine Learning.
+        I'm <span class="highlight">Manoj Kumar K</span>, a
+        B.E. Computer Science and Engineering student specializing
+        in Artificial Intelligence and Machine Learning.
 
         <br><br>
 
@@ -624,31 +569,23 @@
 
         <br><br>
 
-        I enjoy learning new technologies, solving programming problems
-        and turning ideas into practical projects. My goal is to
-        continuously strengthen my technical foundation and build useful,
+        I enjoy learning new technologies, solving programming
+        problems and turning ideas into practical projects. My goal
+        is to strengthen my technical foundation and build useful,
         real-world applications.
       </p>
 
     </div>
-
   </section>
 
-
-  <!-- ================= SKILLS ================= -->
+  <!-- TECHNICAL SKILLS -->
 
   <section id="skills">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Technical Skills
-        </div>
-
+        <div class="section-label">Technical Skills</div>
         <h2>What I work with</h2>
-
       </div>
 
       <div class="skills-grid">
@@ -656,178 +593,140 @@
         <div class="skill-card">
           <h3>Python Programming</h3>
           <p>
-            Academic programming, problem solving and application development.
+            Academic programming, problem solving and
+            application development.
           </p>
         </div>
 
         <div class="skill-card">
           <h3>Java</h3>
           <p>
-            Currently strengthening Java and object-oriented programming.
+            Strengthening Java fundamentals and
+            object-oriented programming.
           </p>
         </div>
 
         <div class="skill-card">
           <h3>Data Structures</h3>
           <p>
-            Understanding fundamental data structures and algorithmic
-            problem solving.
+            Learning fundamental data structures and
+            algorithmic problem solving.
           </p>
         </div>
 
         <div class="skill-card">
           <h3>Artificial Intelligence & ML</h3>
           <p>
-            Learning AI and Machine Learning concepts and their applications.
+            Learning AI and Machine Learning concepts
+            and their applications.
           </p>
         </div>
 
         <div class="skill-card">
           <h3>Application Development</h3>
           <p>
-            Developing practical applications using programming and
-            no-code development tools.
+            Developing practical applications using programming
+            and visual development tools.
           </p>
         </div>
 
         <div class="skill-card">
           <h3>Web Development</h3>
           <p>
-            Building project websites and maintaining a professional
-            online portfolio.
+            Building project websites and maintaining
+            a professional online portfolio.
           </p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ================= PROJECTS ================= -->
+  <!-- PROJECTS: ONLY TWO PROJECTS -->
 
   <section id="projects">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Projects
-        </div>
-
-        <h2>Things I've built</h2>
+        <div class="section-label">Projects</div>
+        <h2>My Projects</h2>
 
         <p>
-          Practical projects where I apply programming concepts and
-          experiment with new technologies.
+          Practical projects focused on interactive game
+          development and website design.
         </p>
-
       </div>
-
 
       <div class="projects">
 
+        <!-- PROJECT 01 -->
+
         <div class="project">
 
-          <div class="project-number">
-            PROJECT 01
-          </div>
+          <div class="project-number">PROJECT 01</div>
 
-          <h3>Smart Voice Calculator</h3>
+          <h3>Rock Paper Scissors Game</h3>
 
           <div class="project-tech">
-            Voice Interaction • Calculator • Application Development
+            MIT App Inventor • Game Development • Visual Programming
           </div>
 
           <p>
-            A calculator application designed to accept voice commands
-            for performing calculations along with standard user input.
+            An interactive Rock Paper Scissors game developed
+            using MIT App Inventor. Players choose Rock, Paper
+            or Scissors, and the computer generates a choice.
+            The game compares both choices and displays the result.
           </p>
 
           <ul>
-            <li>Designed the core voice-command calculation logic.</li>
-            <li>Implemented calculation functionality for user input.</li>
-            <li>Focused on creating a simple and practical user experience.</li>
+            <li>Designed an interactive game interface.</li>
+            <li>Implemented Rock, Paper and Scissors game rules.</li>
+            <li>Used random computer choices.</li>
+            <li>Displayed the result of each round.</li>
           </ul>
 
         </div>
 
+        <!-- PROJECT 02 -->
 
         <div class="project">
 
-          <div class="project-number">
-            PROJECT 02
-          </div>
+          <div class="project-number">PROJECT 02</div>
 
-          <h3>Smart Voice Calculator — Project Website</h3>
+          <h3>Rock Paper Scissors Game Website</h3>
 
           <div class="project-tech">
-            HTML • CSS • Web Development
+            HTML • CSS • JavaScript • Web Development
           </div>
 
           <p>
-            A dedicated project website created to present the Smart
-            Voice Calculator, its features and development.
+            A website created to present the Rock Paper Scissors
+            game project, its features, rules and working process
+            in a clear and organized layout.
           </p>
 
           <ul>
-            <li>Designed a responsive project presentation website.</li>
-            <li>Organized project information into clear sections.</li>
-            <li>Created a web-based portfolio for the application.</li>
-          </ul>
-
-        </div>
-
-
-        <div class="project">
-
-          <div class="project-number">
-            PROJECT 03
-          </div>
-
-          <h3>Game Development Project</h3>
-
-          <div class="project-tech">
-            Game Development • No-Code Development
-          </div>
-
-          <p>
-            A game development project currently in progress, focused
-            on applying programming and interactive application concepts.
-          </p>
-
-          <ul>
-            <li>Exploring game mechanics and interactive design.</li>
-            <li>Learning through practical implementation.</li>
+            <li>Designed a clean and user-friendly website.</li>
+            <li>Presented the game's features and rules.</li>
+            <li>Explained the game's working process.</li>
+            <li>Organized project information in a professional layout.</li>
           </ul>
 
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ================= EDUCATION ================= -->
+  <!-- EDUCATION -->
 
   <section id="education">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Education
-        </div>
-
+        <div class="section-label">Education</div>
         <h2>Academic Journey</h2>
-
       </div>
-
 
       <div class="timeline">
 
@@ -843,96 +742,67 @@
           </div>
 
           <p>
-            Currently pursuing second year of undergraduate study.
+            Currently pursuing undergraduate studies.
           </p>
 
         </div>
 
       </div>
-
     </div>
-
   </section>
 
+  <!-- CURRENTLY LEARNING -->
 
-  <!-- ================= CURRENTLY LEARNING ================= -->
-
-  <section>
-
+  <section id="learning">
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Currently Learning
-        </div>
-
+        <div class="section-label">Currently Learning</div>
         <h2>Growing my technical foundation</h2>
-
       </div>
-
 
       <div class="learning-grid">
 
         <div class="learning-card">
-
           <h3>Java Programming — NPTEL</h3>
 
           <p>
-            Strengthening object-oriented programming, Java fundamentals
-            and application-development concepts.
+            Strengthening object-oriented programming,
+            Java fundamentals and application-development concepts.
           </p>
 
-          <span class="status">
-            CURRENTLY LEARNING
-          </span>
-
+          <span class="status">CURRENTLY LEARNING</span>
         </div>
 
-
         <div class="learning-card">
-
           <h3>Python Programming</h3>
 
           <p>
-            Continuing Python programming as part of academic coursework
-            and practical programming exercises.
+            Practicing Python programming through academic
+            coursework and practical programming exercises.
           </p>
 
-          <span class="status">
-            ONGOING
-          </span>
-
+          <span class="status">ONGOING</span>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ================= ACHIEVEMENTS ================= -->
+  <!-- ACHIEVEMENTS -->
 
   <section id="achievements">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Achievements
-        </div>
-
+        <div class="section-label">Achievements</div>
         <h2>Microsoft Learn</h2>
 
         <p>
-          Completed multiple Microsoft Learn modules and assessments
-          covering AI, cybersecurity, Microsoft Fabric and Copilot.
+          Microsoft Learn modules and assessments covering
+          AI, cybersecurity, Microsoft Fabric and Copilot.
         </p>
-
       </div>
-
 
       <div class="achievement-list">
 
@@ -981,31 +851,20 @@
         </div>
 
       </div>
-
     </div>
-
   </section>
 
+  <!-- INTERESTS -->
 
-  <!-- ================= INTERESTS ================= -->
-
-  <section>
-
+  <section id="interests">
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Interests
-        </div>
-
+        <div class="section-label">Interests</div>
         <h2>Areas I'm exploring</h2>
-
       </div>
 
-
       <div class="tags">
-
         <span class="tag">Artificial Intelligence</span>
         <span class="tag">Machine Learning</span>
         <span class="tag">Python</span>
@@ -1016,79 +875,38 @@
         <span class="tag">Game Development</span>
         <span class="tag">Web Development</span>
         <span class="tag">AI-Based Solutions</span>
-
       </div>
 
     </div>
-
   </section>
 
-
-  <!-- ================= CONTACT ================= -->
+  <!-- CONTACT -->
 
   <section id="contact">
-
     <div class="container">
 
       <div class="section-heading">
-
-        <div class="section-label">
-          Contact
-        </div>
-
+        <div class="section-label">Contact</div>
         <h2>Let's connect</h2>
-
       </div>
-
 
       <div class="contact-box">
 
         <p>
-          I'm interested in learning, collaborating on projects and
-          exploring opportunities related to software development,
-          Artificial Intelligence and Machine Learning.
+          I'm interested in learning, collaborating on projects
+          and exploring opportunities related to software
+          development, Artificial Intelligence and Machine Learning.
         </p>
-
 
         <div class="contact-links">
 
-          <a
-            href="mailto:YOUR_EMAIL@gmail.com"
-            class="contact-link">
+          <!-- Replace with your actual email address -->
+          <a href="mailto:YOUR_EMAIL@gmail.com"
+             class="contact-link">
             ✉ Email
           </a>
 
-
-          <a
-            href="YOUR_GITHUB_LINK"
-            target="_blank"
-            rel="noopener"
-            class="contact-link">
-            GitHub
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container">
-
-      © 2026 Manoj Kumar K · B.E. CSE (AI & ML)
-
-    </div>
-
-  </footer>
-
-
-</body>
-</html>
-```
+          <!-- Replace with your actual GitHub profile URL -->
+          <a href="YOUR_GITHUB_LINK"
+             target="_blank"
+   
